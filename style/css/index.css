@@ -1,0 +1,757 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: transparent;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 7, 1fr;
+  grid-template-rows: auto, auto;
+  grid-template-areas: "header  header  header header header header  header" "article article main   main   main   section section" "article article main   main   main   section section" "article article main   main   main   section section" "footer  footer  footer footer footer footer  footer";
+}
+
+header {
+  grid-area: header;
+}
+header div {
+  display: flex;
+  justify-content: center;
+}
+
+article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: article;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: main;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: section;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  grid-area: footer;
+}
+footer .creativeCommon {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.6156862745);
+}
+footer .creativeCommon a {
+  text-decoration: none;
+  color: red;
+}
+
+#start {
+  margin-top: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  font-size: large;
+  color: black;
+  padding: 0 40px;
+  background: lightblue;
+  border: 3px solid #003060;
+  border-radius: 40px;
+  box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+}
+
+#start:hover {
+  background: #003060;
+  color: white;
+  position: relative;
+  top: 10px;
+  box-shadow: none;
+}
+
+@media (max-width: 600px) {
+  body {
+    grid-template-areas: "header  header  header header header header  header" "article article article article article article article" "main main main   main   main   main main" "section section section   section   section   section section" "footer  footer  footer footer footer footer  footer";
+  }
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, rgb(140, 122, 122) 0%, rgb(175, 135, 124) 65%, rgb(175, 135, 124) 100%) fixed;
+  background: url("../../img/background/InSpeciesModel2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font: 14px/20px "Lato", Arial, sans-serif;
+  color: #9E9E9E;
+  margin-top: 30px;
+}
+
+.slide-container {
+  margin: auto;
+  width: 600px;
+  text-align: center;
+}
+
+.wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.wrapper:focus {
+  outline: 0;
+}
+
+.clash-card {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: 19px;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+}
+
+.clash-card__image {
+  position: relative;
+  height: 230px;
+  margin-bottom: 35px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.clash-card__image--acero {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg");
+}
+.clash-card__image--acero img {
+  width: 300px;
+  position: absolute;
+  top: -35px;
+  left: 0px;
+}
+
+.clash-card__image--agua {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg");
+}
+.clash-card__image--agua img {
+  width: 250px;
+  position: absolute;
+  top: -28px;
+  left: 0px;
+}
+
+.clash-card__image--bicho {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant-bg.jpg");
+}
+.clash-card__image--bicho img {
+  width: 400px;
+  position: absolute;
+  top: -30px;
+  left: -55px;
+}
+
+.clash-card__image--dragon {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin-bg.jpg");
+}
+.clash-card__image--dragon img {
+  width: 370px;
+  position: absolute;
+  top: -21px;
+  left: -37px;
+}
+
+.clash-card__image--electrico {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin-bg.jpg");
+}
+.clash-card__image--electrico img {
+  width: 400px;
+  position: absolute;
+  top: -150px;
+  left: -50px;
+}
+
+.clash-card__image--fantasma {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg");
+}
+.clash-card__image--fantasma img {
+  width: 280px;
+  position: absolute;
+  top: -5px;
+  left: 10px;
+}
+
+.clash-card__image--fuego {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg");
+}
+.clash-card__image--fuego img {
+  width: 400px;
+  position: absolute;
+  top: -34px;
+  left: -57px;
+}
+
+.clash-card__image--hada {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant-bg.jpg");
+}
+.clash-card__image--hada img {
+  width: 240px;
+  position: absolute;
+  top: -30px;
+  left: 15px;
+}
+
+.clash-card__image--hielo {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin-bg.jpg");
+}
+.clash-card__image--hielo img {
+  width: 270px;
+  position: absolute;
+  top: -21px;
+  left: 40px;
+}
+
+.clash-card__image--lucha {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg");
+}
+.clash-card__image--lucha img {
+  width: 250px;
+  position: absolute;
+  top: -38px;
+  left: 20px;
+}
+
+.clash-card__image--normal {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg");
+}
+.clash-card__image--normal img {
+  width: 400px;
+  position: absolute;
+  top: -65px;
+  left: -70px;
+}
+
+.clash-card__image--planta {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg");
+}
+.clash-card__image--planta img {
+  width: 300px;
+  position: absolute;
+  top: -80px;
+  left: 0px;
+}
+
+.clash-card__image--psiquico {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant-bg.jpg");
+}
+.clash-card__image--psiquico img {
+  width: 200px;
+  position: absolute;
+  top: -30px;
+  left: 60px;
+}
+
+.clash-card__image--roca {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin-bg.jpg");
+}
+.clash-card__image--roca img {
+  width: 350px;
+  position: absolute;
+  top: -61px;
+  left: -17px;
+}
+
+.clash-card__image--siniestro {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg");
+}
+.clash-card__image--siniestro img {
+  width: 345px;
+  position: absolute;
+  top: -58px;
+  left: -10px;
+}
+
+.clash-card__image--tierra {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg");
+}
+.clash-card__image--tierra img {
+  width: 250px;
+  position: absolute;
+  top: -35px;
+  left: 30px;
+}
+
+.clash-card__image--veneno {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg");
+}
+.clash-card__image--veneno img {
+  width: 350px;
+  position: absolute;
+  top: -44px;
+  left: -27px;
+}
+
+.clash-card__image--volador {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant-bg.jpg");
+}
+.clash-card__image--volador img {
+  width: 280px;
+  position: absolute;
+  top: -40px;
+  left: 0px;
+}
+
+.clash-card__level {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.clash-card__level--acero {
+  color: #60756e;
+}
+
+.clash-card__level--agua {
+  color: #1452e1;
+}
+
+.clash-card__level--bicho {
+  color: #3c9950;
+}
+
+.clash-card__level--dragon {
+  color: #448a95;
+}
+
+.clash-card__level--electrico {
+  color: #e2e32a;
+}
+
+.clash-card__level--fantasma {
+  color: #33336b;
+}
+
+.clash-card__level--fuego {
+  color: #ab1f23;
+}
+
+.clash-card__level--hada {
+  color: #961a45;
+}
+
+.clash-card__level--hielo {
+  color: #86d2f6;
+}
+
+.clash-card__level--lucha {
+  color: #994025;
+}
+
+.clash-card__level--normal {
+  color: #75525c;
+}
+
+.clash-card__level--planta {
+  color: #147b3d;
+}
+
+.clash-card__level--psiquico {
+  color: #a52a6c;
+}
+
+.clash-card__level--roca {
+  color: #48190a;
+}
+
+.clash-card__level--siniestro {
+  color: #040707;
+}
+
+.clash-card__level--tierra {
+  color: #a8702d;
+}
+
+.clash-card__level--veneno {
+  color: #5e2d89;
+}
+
+.clash-card__level--volador {
+  color: #4a677d;
+}
+
+.clash-card__unit-name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.clash-card__unit-description {
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.clash-card__unit-stats--acero {
+  background: #60756e;
+}
+.clash-card__unit-stats--acero .one-third {
+  border-right: 1px solid #60756e;
+}
+
+.clash-card__unit-stats--agua {
+  background: #1452e1;
+}
+.clash-card__unit-stats--agua .one-third {
+  border-right: 1px solid #1452e1;
+}
+
+.clash-card__unit-stats--bicho {
+  background: #3c9950;
+}
+.clash-card__unit-stats--bicho .one-third {
+  border-right: 1px solid #317c41;
+}
+
+.clash-card__unit-stats--dragon {
+  background: #448a95;
+}
+.clash-card__unit-stats--dragon .one-third {
+  border-right: 1px solid #3a7780;
+}
+
+.clash-card__unit-stats--electrico {
+  background: #e2e32a;
+}
+.clash-card__unit-stats--electrico .one-third {
+  border-right: 1px solid #d2d31c;
+}
+
+.clash-card__unit-stats--fantasma {
+  background: #33336b;
+}
+.clash-card__unit-stats--fantasma .one-third {
+  border-right: 1px solid #33336b;
+}
+
+.clash-card__unit-stats--fuego {
+  background: #ab1f23;
+}
+.clash-card__unit-stats--fuego .one-third {
+  border-right: 1px solid #ab1f23;
+}
+
+.clash-card__unit-stats--hada {
+  background: #961a45;
+}
+.clash-card__unit-stats--hada .one-third {
+  border-right: 1px solid #731435;
+}
+
+.clash-card__unit-stats--hielo {
+  background: #86d2f6;
+}
+.clash-card__unit-stats--hielo .one-third {
+  border-right: 1px solid #6ac7f4;
+}
+
+.clash-card__unit-stats--lucha {
+  background: #994025;
+}
+.clash-card__unit-stats--lucha .one-third {
+  border-right: 1px solid #80361f;
+}
+
+.clash-card__unit-stats--normal {
+  background: #75525c;
+}
+.clash-card__unit-stats--normal .one-third {
+  border-right: 1px solid #75525c;
+}
+
+.clash-card__unit-stats--planta {
+  background: #147b3d;
+}
+.clash-card__unit-stats--planta .one-third {
+  border-right: 1px solid #147b3d;
+}
+
+.clash-card__unit-stats--psiquico {
+  background: #a52a6c;
+}
+.clash-card__unit-stats--psiquico .one-third {
+  border-right: 1px solid #842257;
+}
+
+.clash-card__unit-stats--roca {
+  background: #48190a;
+}
+.clash-card__unit-stats--roca .one-third {
+  border-right: 1px solid #2d1006;
+}
+
+.clash-card__unit-stats--siniestro {
+  background: #040707;
+}
+.clash-card__unit-stats--siniestro .one-third {
+  border-right: 1px solid black;
+}
+
+.clash-card__unit-stats--tierra {
+  background: #a8702d;
+}
+.clash-card__unit-stats--tierra .one-third {
+  border-right: 1px solid #a8702d;
+}
+
+.clash-card__unit-stats--veneno {
+  background: #5e2d89;
+}
+.clash-card__unit-stats--veneno .one-third {
+  border-right: 1px solid #5e2d89;
+}
+
+.clash-card__unit-stats--volador {
+  background: #4a677d;
+}
+.clash-card__unit-stats--volador .one-third {
+  border-right: 1px solid #3b5263;
+}
+
+.clash-card__unit-stats {
+  color: white;
+  font-weight: 700;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+.clash-card__unit-stats .one-third {
+  width: 33%;
+  float: left;
+  padding: 20px 15px;
+}
+.clash-card__unit-stats sup {
+  position: absolute;
+  bottom: 4px;
+  font-size: 45%;
+  margin-left: 2px;
+}
+.clash-card__unit-stats .stat {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.clash-card__unit-stats .stat-value {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+}
+.clash-card__unit-stats .no-border {
+  border-right: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.slick-prev {
+  left: 100px;
+  z-index: 999;
+}
+
+.slick-next {
+  right: 100px;
+  z-index: 999;
+}
+
+#contenido {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page {
+  background-color: #f8f5de;
+  background-image: url("../../img/background/paper.jpg");
+  box-shadow: inset 0 0 75px rgba(149, 122, 1, 0.3), inset 0 0 20px rgba(255, 210, 0, 0.4), inset 0 0 30px rgba(220, 120, 0, 0.8);
+  color: rgb(0, 0, 0);
+  font-family: "AustralisProSwash-Italic";
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+  margin: 5em 10em 15em 5em;
+  padding: 5em 10em 15em 5em;
+  font-size: large;
+}
+
+.caps {
+  color: rgba(243, 0, 0, 0.7);
+  float: left;
+  font-size: 7em;
+  line-height: 70px;
+  position: relative;
+  top: 8px;
+}
+
+.enlaces {
+  color: black;
+  font-style: italic;
+  text-decoration: none;
+}
+.enlaces:hover {
+  transition: all 0.5s;
+  border-radius: 5px;
+  background: black;
+  color: #f8f5de;
+}
+
+@media (max-width: 600px) {
+  .page {
+    background-color: #f8f5de;
+    background-image: url("../../img/background/paper.jpg");
+    box-shadow: inset 0 0 75px rgba(149, 122, 1, 0.3), inset 0 0 20px rgba(255, 210, 0, 0.4), inset 0 0 30px rgba(220, 120, 0, 0.8);
+    color: rgb(0, 0, 0);
+    font-family: "AustralisProSwash-Italic";
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    margin-left: 50px;
+  }
+}
+.videos {
+  box-shadow: none;
+}
+.videos .video-gallery-container {
+  border-radius: 20px;
+  width: 123em;
+  font-family: "Roboto", sans-serif;
+  background: #000000;
+  position: relative;
+  top: -10px;
+  height: 573px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.videos .video-gallery-container,
+.videos .video-gallery-container * {
+  box-sizing: border-box;
+}
+.videos .video-gallery-container div.title {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  top: 15px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.videos .video-gallery-container .video-gallery {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-radius: 20px;
+  display: flex;
+  background: #02151e;
+  justify-content: center;
+  padding: 16px;
+  padding-top: 103px;
+  gap: 51px;
+  color: #fff;
+  height: 612px;
+}
+.videos .video-gallery h3.video-title {
+  line-height: 1.6;
+  font-weight: 700;
+  font-size: 20px;
+  width: 100%;
+}
+.videos .video-gallery .thumbnail {
+  height: 120px;
+  cursor: pointer;
+}
+.videos .video-gallery .video {
+  position: relative;
+}
+.videos .video-gallery .video:hover .play-icon {
+  opacity: 1;
+}
+.videos .video-gallery .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+.videos .video-gallery .video .play-icon img {
+  height: 50px;
+  width: 50px;
+}
+.videos .video-gallery .all-videos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.videos .video-gallery .responsive-iframe {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+  padding-bottom: 30px;
+}
+.videos .video-gallery .responsive-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .video-gallery-container {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .video-gallery-container .video-gallery {
+    flex-direction: column;
+  }
+  .video-gallery .all-videos {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .video-gallery .thumbnail {
+    height: unset;
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .videos .responsive-iframe {
+    width: 22rem;
+  }
+  .videos .video-gallery-container {
+    max-width: 400px;
+  }
+  .videos .video-gallery-container .all-videos {
+    flex-direction: row;
+    width: 22rem;
+  }
+}/*# sourceMappingURL=index.css.map */

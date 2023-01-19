@@ -1,0 +1,109 @@
+//Developed by: Nicolas Cabrera Rodriguez
+//variables:
+$sombra: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+  rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: transparent;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: (7, 1fr);
+  grid-template-rows: (auto, auto);
+  grid-template-areas:
+    "header  header  header header header header  header"
+    "article article main   main   main   section section"
+    "article article main   main   main   section section"
+    "article article main   main   main   section section"
+    "footer  footer  footer footer footer footer  footer";
+}
+
+header {
+  grid-area: header;
+
+  div {
+    display: flex;
+    justify-content: center;
+  }
+}
+article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: article;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: main;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: section;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  grid-area: footer;
+  .creativeCommon{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: auto;
+    background: #0000009d;
+
+    a{
+      text-decoration: none;
+      color: red;
+    }
+
+  }
+}
+
+#start {
+  margin-top: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  font-size: large;
+  color: black;
+  padding: 0 40px;
+  background: lightblue;
+  border: 3px solid #003060;
+  border-radius: 40px;
+  box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+}
+#start:hover {
+  background: #003060;
+  color: white;
+  position: relative;
+  top: 10px;
+  box-shadow: none;
+}
+
+@media (max-width: 600px) {
+  body {
+    grid-template-areas:
+      "header  header  header header header header  header"
+      "article article article article article article article"
+      "main main main   main   main   main main"
+      "section section section   section   section   section section"
+      "footer  footer  footer footer footer footer  footer";
+  }
+}
+@import "especies";
+@import "historia";
+@import "media";

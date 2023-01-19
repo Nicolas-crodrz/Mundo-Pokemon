@@ -1,0 +1,574 @@
+// Developed by: Nicolas Cabrera Rodriguez
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+$border-radius-size: 14px;
+// COLOR DE LOS TIPOS DE POKEMON`S
+$acero:#60756e;
+$agua:#1452e1;
+$bicho:#3c9950;
+$dragon:#448a95;
+$electrico:#e2e32a;
+$fantasma:#33336b;
+$fuego:#ab1f23;
+$hada:#961a45;
+$hielo:#86d2f6;
+$lucha:#994025;
+$normal:#75525c;
+$planta:#147b3d;
+$psiquico:#a52a6c;
+$roca:#48190a;
+$siniestro:#040707;
+$tierra:#a8702d;
+$veneno:#5e2d89;
+$volador:#4a677d;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, rgba(140,122,122,1) 0%, rgba(175,135,124,1) 65%, rgba(175,135,124,1) 100%) fixed;
+  background: url('../../img/background/InSpeciesModel2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font: 14px/20px "Lato", Arial, sans-serif;
+  color: #9E9E9E;
+  margin-top: 30px;
+}
+
+.slide-container {
+  margin: auto;
+  width: 600px;
+  text-align: center;
+}
+
+.wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+
+
+.clash-card {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: $border-radius-size + 5;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+}
+
+.clash-card__image {
+  position: relative;
+  height: 230px;
+  margin-bottom: 35px;
+  border-top-left-radius: $border-radius-size;
+  border-top-right-radius: $border-radius-size;
+}
+
+
+// POKEMONS TYPE
+
+.clash-card__image--acero {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg');
+  img {
+    width: 300px;
+    position: absolute;
+    top: -35px;
+    left: 0px;
+  }
+}
+
+.clash-card__image--agua {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg');
+  img {
+    width: 250px;
+    position: absolute;
+    top: -28px;
+    left: 0px;
+  }
+}
+
+
+.clash-card__image--bicho {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant-bg.jpg');
+  img {
+    width: 400px;
+    position: absolute;
+    top: -30px;
+    left: -55px;
+  }
+}
+
+
+.clash-card__image--dragon {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin-bg.jpg');
+  img {
+    width: 370px;
+    position: absolute;
+    top: -21px;
+    left: -37px;
+  }
+}
+
+.clash-card__image--electrico {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin-bg.jpg');
+  img {
+    width: 400px;
+    position: absolute;
+    top: -150px;
+    left: -50px;
+  }
+}
+
+.clash-card__image--fantasma {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg');
+  img {
+    width: 280px;
+    position: absolute;
+    top: -5px;
+    left: 10px;
+  }
+}
+
+.clash-card__image--fuego {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg');
+  img {
+    width: 400px;
+    position: absolute;
+    top: -34px;
+    left: -57px;
+  }
+}
+
+.clash-card__image--hada {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant-bg.jpg');
+  img {
+    width: 240px;
+    position: absolute;
+    top: -30px;
+    left: 15px;
+  }
+}
+
+.clash-card__image--hielo {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin-bg.jpg');
+  img {
+    width: 270px;
+    position: absolute;
+    top: -21px;
+    left: 40px;
+  }
+}
+
+.clash-card__image--lucha {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg');
+  img {
+    width: 250px;
+    position: absolute;
+    top: -38px;
+    left: 20px;
+  }
+}
+
+
+.clash-card__image--normal {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg');
+  img {
+    width: 400px;
+    position: absolute;
+    top: -65px;
+    left: -70px;
+  }
+}
+
+
+.clash-card__image--planta {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg');
+  img {
+    width: 300px;
+    position: absolute;
+    top: -80px;
+    left: 0px;
+  }
+}
+
+.clash-card__image--psiquico {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant-bg.jpg');
+  img {
+    width: 200px;
+    position: absolute;
+    top: -30px;
+    left: 60px;
+  }
+}
+
+.clash-card__image--roca {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin-bg.jpg');
+  img {
+    width: 350px;
+    position: absolute;
+    top: -61px;
+    left: -17px;
+  }
+}
+
+.clash-card__image--siniestro {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg');
+  img {
+    width: 345px;
+    position: absolute;
+    top: -58px;
+    left: -10px;
+  }
+}
+
+
+.clash-card__image--tierra {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg');
+  img {
+    width: 250px;
+    position: absolute;
+    top: -35px;
+    left: 30px;
+  }
+}
+
+
+.clash-card__image--veneno {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg');
+  img {
+    width: 350px;
+    position: absolute;
+    top: -44px;
+    left: -27px;
+  }
+}
+
+.clash-card__image--volador {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant-bg.jpg');
+  img {
+    width: 280px;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+  }
+}
+
+
+.clash-card__level {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+
+// POKEMONS COLORS
+
+.clash-card__level--acero {
+  color: $acero;
+}
+
+.clash-card__level--agua {
+  color: $agua;
+}
+
+.clash-card__level--bicho {
+  color: $bicho;
+}
+
+.clash-card__level--dragon {
+  color: $dragon;
+}
+
+
+.clash-card__level--electrico {
+  color: $electrico;
+}
+
+.clash-card__level--fantasma {
+  color: $fantasma;
+}
+
+.clash-card__level--fuego {
+  color: $fuego;
+}
+
+.clash-card__level--hada {
+  color: $hada;
+}
+
+.clash-card__level--hielo {
+  color: $hielo;
+}
+
+.clash-card__level--lucha {
+  color: $lucha;
+}
+
+.clash-card__level--normal {
+  color: $normal;
+}
+
+.clash-card__level--planta {
+  color: $planta;
+}
+
+.clash-card__level--psiquico {
+  color: $psiquico;
+}
+
+.clash-card__level--roca {
+  color: $roca;
+}
+
+.clash-card__level--siniestro {
+  color: $siniestro;
+}
+
+.clash-card__level--tierra {
+  color: $tierra;
+}
+
+.clash-card__level--veneno {
+  color: $veneno;
+}
+
+.clash-card__level--volador {
+  color: $volador;
+}
+
+
+.clash-card__unit-name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.clash-card__unit-description {
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+// POKEMONS STATS
+
+.clash-card__unit-stats--acero {
+  background: $acero;
+  
+  .one-third {
+     border-right: 1px solid $acero;
+  }
+}
+
+
+.clash-card__unit-stats--agua {
+  background: $agua;
+  
+  .one-third {
+     border-right: 1px solid $agua;
+  }
+}
+
+
+.clash-card__unit-stats--bicho {
+  background: $bicho;
+  
+  .one-third {
+     border-right: 1px solid darken($bicho, 8%);
+  }
+}
+
+.clash-card__unit-stats--dragon {
+  background: $dragon;
+  
+  .one-third {
+     border-right: 1px solid darken($dragon, 6%);
+  }
+}
+
+
+.clash-card__unit-stats--electrico {
+  background: $electrico;
+  
+  .one-third {
+     border-right: 1px solid darken($electrico, 6%);
+  }
+}
+
+.clash-card__unit-stats--fantasma {
+  background: $fantasma;
+  
+  .one-third {
+     border-right: 1px solid $fantasma;
+  }
+}
+
+.clash-card__unit-stats--fuego {
+  background: $fuego;
+  
+  .one-third {
+     border-right: 1px solid $fuego;
+  }
+}
+
+.clash-card__unit-stats--hada {
+  background: $hada;
+  
+  .one-third {
+     border-right: 1px solid darken($hada, 8%);
+  }
+}
+
+.clash-card__unit-stats--hielo {
+  background: $hielo;
+  
+  .one-third {
+     border-right: 1px solid darken($hielo, 6%);
+  }
+}
+
+.clash-card__unit-stats--lucha {
+  background: $lucha;
+  
+  .one-third {
+     border-right: 1px solid darken($lucha, 6%);
+  }
+}
+
+.clash-card__unit-stats--normal {
+  background: $normal;
+  
+  .one-third {
+     border-right: 1px solid $normal;
+  }
+}
+
+.clash-card__unit-stats--planta {
+  background: $planta;
+  
+  .one-third {
+     border-right: 1px solid $planta;
+  }
+}
+
+.clash-card__unit-stats--psiquico {
+  background: $psiquico;
+  
+  .one-third {
+     border-right: 1px solid darken($psiquico, 8%);
+  }
+}
+
+
+.clash-card__unit-stats--roca {
+  background: $roca;
+  
+  .one-third {
+     border-right: 1px solid darken($roca, 6%);
+  }
+}
+
+.clash-card__unit-stats--siniestro {
+  background: $siniestro;
+  
+  .one-third {
+     border-right: 1px solid darken($siniestro, 6%);
+  }
+}
+
+.clash-card__unit-stats--tierra {
+  background: $tierra;
+  
+  .one-third {
+     border-right: 1px solid $tierra;
+  }
+}
+
+.clash-card__unit-stats--veneno {
+  background: $veneno;
+  
+  .one-third {
+     border-right: 1px solid $veneno;
+  }
+}
+
+.clash-card__unit-stats--volador {
+  background: $volador;
+  
+  .one-third {
+     border-right: 1px solid darken($volador, 8%);
+  }
+}
+
+.clash-card__unit-stats {
+  
+  color: white;
+  font-weight: 700;
+  border-bottom-left-radius: $border-radius-size;
+  border-bottom-right-radius: $border-radius-size;
+  
+  .one-third {
+    width: 33%;
+    float: left;
+    padding: 20px 15px;
+  }
+  
+  sup {
+    position: absolute;
+    bottom: 4px; 
+    font-size: 45%;
+    margin-left: 2px;
+  }
+  
+  .stat {
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .stat-value {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .no-border {
+    border-right: none;
+  }
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.slick-prev {
+  left: 100px;
+  z-index: 999;
+}
+
+.slick-next {
+  right: 100px;
+  z-index: 999;
+}
+
+#contenido{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}

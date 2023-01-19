@@ -1,0 +1,137 @@
+// Developed by: Nicolas Cabrera Rodriguez
+.videos {
+  box-shadow: none;
+  .video-gallery-container {
+    border-radius: 20px;
+    width: 123em;
+    font-family: "Roboto", sans-serif;
+    background: #000000;
+    position: relative;
+    top: -10px;
+    height: 573px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+
+  .video-gallery-container,
+  .video-gallery-container * {
+    box-sizing: border-box;
+  }
+
+  .video-gallery-container div.title {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    top: 15px;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .video-gallery-container .video-gallery {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-radius: 20px;
+    display: flex;
+    background: #02151e;
+    justify-content: center;
+    padding: 16px;
+    padding-top: 103px;
+    gap: 51px;
+    color: #fff;
+    height: 612px;
+  }
+
+  .video-gallery h3.video-title {
+    line-height: 1.6;
+    font-weight: 700;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .video-gallery .thumbnail {
+    height: 120px;
+    cursor: pointer;
+  }
+
+  .video-gallery .video {
+    position: relative;
+  }
+
+  .video-gallery .video:hover .play-icon {
+    opacity: 1;
+  }
+
+  .video-gallery .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 400ms ease;
+  }
+
+  .video-gallery .video .play-icon img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .video-gallery .all-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .video-gallery .responsive-iframe {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-top: 56.25%;
+    padding-bottom: 30px;
+  }
+
+  .video-gallery .responsive-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .video-gallery-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .video-gallery-container .video-gallery {
+    flex-direction: column;
+  }
+
+  .video-gallery .all-videos {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .video-gallery .thumbnail {
+    height: unset;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .videos {
+    .responsive-iframe{
+      width: 22rem;
+    }
+    .video-gallery-container {
+      max-width: 400px;
+      .all-videos {
+        flex-direction: row;
+        width:22rem;
+      }
+    }
+  }
+}
